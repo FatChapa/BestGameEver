@@ -706,6 +706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraAxisTransform: {fileID: 1185164796}
+  minAngle: -30
+  maxAngle: 15
   RotationSpeed: 500
 --- !u!1 &959884047
 GameObject:
