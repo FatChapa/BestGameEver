@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float gravity = 9.8f;
-
+    public float jumpForce;
     private float _fallVelocity = 0;
 
     private CharacterController _characterController;
@@ -17,9 +17,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
-            Debug.Log("JUMP");
+            _fallVelocity = -jumpForce;
         }
     }
 
