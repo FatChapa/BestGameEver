@@ -15,6 +15,14 @@ public class PlayerController : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("JUMP");
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
