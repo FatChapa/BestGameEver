@@ -29,8 +29,13 @@ public class PlayerController : MonoBehaviour
             _moveVector += transform.forward;
         }
 
+        if (Input.GetKey(KeyCode.S))
+        {
+            _moveVector -= transform.forward;
+        }
+
         //Jump
-        if(Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
             _fallVelocity = -jumpForce;
         }
