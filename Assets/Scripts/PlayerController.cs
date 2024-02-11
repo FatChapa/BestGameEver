@@ -39,6 +39,11 @@ public class PlayerController : MonoBehaviour
             _moveVector += transform.right;
         }
 
+        if (Input.GetKey(KeyCode.A))
+        {
+            _moveVector -= transform.right;
+        }
+
         //Jump
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
