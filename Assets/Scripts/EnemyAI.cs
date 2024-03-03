@@ -8,16 +8,23 @@ public class EnemyAI : MonoBehaviour
     public List<Transform> patrolPoints;
 
     private NavMeshAgent _navMeshAgent;
-    void Start()
+    private void Start()
+    {
+        InitComponentLinks();
+        PickNewPatrolPoint();
+    }
+
+    private void InitComponentLinks()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
-
-        PickNewPatrolPoint();
-
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
+    {
+        PatrolUpdate();
+    }
+    private void PatrolUpdate()
     {
         if (_navMeshAgent.remainingDistance == 0)
         {
