@@ -13,11 +13,15 @@ public class EnemyAI : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
 
         _navMeshAgent.destination = patrolPoints[Random.Range(0, patrolPoints.Count)].position;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (_navMeshAgent.remainingDistance == 0)
+        {
+            _navMeshAgent.destination = patrolPoints[Random.Range(0, patrolPoints.Count)].position;
+        }
     }
 }
