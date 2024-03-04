@@ -1431,7 +1431,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 0
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1460,6 +1460,20 @@ MonoBehaviour:
   - {fileID: 1661656376}
   - {fileID: 234865992}
   - {fileID: 1478750879}
+  player: {fileID: 1607981352}
+  viewAngle: 90
+--- !u!114 &1607981352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8162247870285359006, guid: f9291afa65f51c74697f58cff4c28c71,
+    type: 3}
+  m_PrefabInstance: {fileID: 1820842548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c068085c7e6d84ea6d17b7d280766e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1648215333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1627,7 @@ PrefabInstance:
     - target: {fileID: 8162247870285358979, guid: f9291afa65f51c74697f58cff4c28c71,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.64
+      value: 2.723
       objectReference: {fileID: 0}
     - target: {fileID: 8162247870285358979, guid: f9291afa65f51c74697f58cff4c28c71,
         type: 3}

@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     public List<Transform> patrolPoints;
     public PlayerController player;
+    public float viewAngle;
 
     private NavMeshAgent _navMeshAgent;
     private bool _isPlayerNoticed;
@@ -26,12 +27,19 @@ public class EnemyAI : MonoBehaviour
     {
         var direction = player.transform.position - transform.position;
 
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position+Vector3.up, direction, out hit))
+        if (Vector3.Angle(transform.forward, direction) < viewAngle)
         {
-            if (hit.collider.gameObject == player.gameObject)
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position + Vector3.up, direction, out hit))
             {
-                _isPlayerNoticed = true;
+                if (hit.collider.gameObject == player.gameObject)
+                {
+                    _isPlayerNoticed = true;
+                }
+                else
+                {
+                    _isPlayerNoticed = false;
+                }
             }
             else
             {
@@ -42,7 +50,7 @@ public class EnemyAI : MonoBehaviour
         {
             _isPlayerNoticed = false;
         }
-       
+
         PatrolUpdate();
     }
     private void PatrolUpdate()
