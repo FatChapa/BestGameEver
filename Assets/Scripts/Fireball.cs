@@ -15,8 +15,16 @@ public class Fireball : MonoBehaviour
     {
         MoveFixedUpdate();
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        DestroyFireball();
+    }
     private void MoveFixedUpdate()
     {
         transform.position += transform.forward * speed * Time.fixedDeltaTime;
+    }
+    private void DestroyFireball()
+    {
+        Destroy(gameObject);
     }
 }
