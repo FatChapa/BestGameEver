@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed;
     void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        transform.position += transform.forward * speed * Time.fixedDeltaTime;
     }
 }
