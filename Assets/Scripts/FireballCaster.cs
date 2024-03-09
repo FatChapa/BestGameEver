@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireballCaster : MonoBehaviour
 {
     public Fireball fireballPrefab;
+    public Transform fireballSourceTransform;
     void Start()
     {
         
@@ -15,7 +16,7 @@ public class FireballCaster : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(fireballPrefab, transform.position, transform.rotation);
+            Instantiate(fireballPrefab, fireballSourceTransform.position, fireballSourceTransform.rotation);
 
         }
     }
