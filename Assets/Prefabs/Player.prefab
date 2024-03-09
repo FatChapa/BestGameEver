@@ -214,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireballPrefab: {fileID: 1341410564137431917, guid: c7d7bc5f5be69b84ea9995ef0cff31df,
     type: 3}
+  fireballSourceTransform: {fileID: 6420130225912077528}
 --- !u!1 &8228203204986191527
 GameObject:
   m_ObjectHideFlags: 0
