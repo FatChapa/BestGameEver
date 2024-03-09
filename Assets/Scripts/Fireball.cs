@@ -5,9 +5,10 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     public float speed;
-    void Start()
+    public float lifetime;
+    private void Start()
     {
-
+        Invoke("DestroyFireball", lifetime);
     }
 
     // Update is called once per frame
