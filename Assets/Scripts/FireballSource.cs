@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireballSource : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform targetPoint;
     void Start()
     {
         
@@ -13,6 +13,6 @@ public class FireballSource : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.LookAt(targetPoint.position);
     }
 }
