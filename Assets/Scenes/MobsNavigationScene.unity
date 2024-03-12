@@ -6161,13 +6161,15 @@ GameObject:
   - component: {fileID: 1607524963}
   - component: {fileID: 1607524964}
   - component: {fileID: 1607524965}
+  - component: {fileID: 1607524966}
+  - component: {fileID: 1607524967}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1607524963
 Transform:
   m_ObjectHideFlags: 0
@@ -6224,6 +6226,32 @@ MonoBehaviour:
   - {fileID: 1478750879}
   player: {fileID: 1607981352}
   viewAngle: 90
+--- !u!114 &1607524966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607524962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69141ff238da3b143b1c1ea2f1eb02fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &1607524967
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607524962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 1.4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7, z: -0.1}
 --- !u!114 &1607981352 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8162247870285359006, guid: f9291afa65f51c74697f58cff4c28c71,
