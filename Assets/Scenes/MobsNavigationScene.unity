@@ -6292,6 +6292,7 @@ MonoBehaviour:
   - {fileID: 1478750879}
   player: {fileID: 1607981352}
   viewAngle: 90
+  damage: 30
 --- !u!114 &1607524966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6484,7 +6485,7 @@ PrefabInstance:
     - target: {fileID: 8162247870285358979, guid: f9291afa65f51c74697f58cff4c28c71,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.98
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 8162247870285358979, guid: f9291afa65f51c74697f58cff4c28c71,
         type: 3}
